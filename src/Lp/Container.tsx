@@ -46,6 +46,21 @@ const Header: React.FC = () => {
                 </div>
             </div>
         </div>
+        <div className="container">
+            <div className="flex justify-center mb-4">
+                <h2 className="text-xl font-bold">借上社宅.comの特徴</h2>
+            </div>
+            <div className="flex justify-center mb-8">
+                <div className="bg-main-orange text-white font-bold rounded p-4 mx-auto">
+                    <h3>初期費用ゼロ円！！！</h3>
+                    <p>〜借上社宅１件から気軽に導入できます！〜</p>
+                </div>
+                <img src="assets/images/Group8.png"></img>
+                <li>利用料は借上社宅の件数分(1,500¥/月)だけ</li>
+                <li>賃貸契約に関わる書類の管理を全てオンラインで完結</li>
+                <li>更新手続もボタンを押すだけで完了！</li>
+            </div>
+        </div>
     </div>
   );
 };
