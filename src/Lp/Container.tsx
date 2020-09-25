@@ -2,8 +2,8 @@ import React from 'react';
 
 const Header: React.FC = () => {
   return (
-    <div className="p-6">
-        <div className="container">
+    <div className="">
+        <div className="p-6">
             <div className="grid grid-cols-2 gap-2 justify-items-center mb-8">
                 <div>
                     <h2 className="text-3xl font-bold">借上社宅で企業も社員も支出を削減！</h2>
@@ -12,7 +12,7 @@ const Header: React.FC = () => {
                 <img src="assets/images/Group9.png"></img>
             </div>
         </div>
-        <div className="container">
+        <div className="bg-pale-green p-6 w-full">
             <div className="flex justify-center mb-4">
                 <h2 className="text-xl font-bold">借上社宅とは？</h2>
             </div>
@@ -25,7 +25,7 @@ const Header: React.FC = () => {
                 <img src="assets/images/Group3.png"></img>
             </div>
         </div>
-        <div className="container">
+        <div className="p-6">
             <div className="flex justify-center mb-4">
                 <h2 className="text-xl font-bold">メリット</h2>
             </div>
@@ -46,19 +46,25 @@ const Header: React.FC = () => {
                 </div>
             </div>
         </div>
-        <div className="container">
+        <div className="p-6">
             <div className="flex justify-center mb-4">
                 <h2 className="text-xl font-bold">借上社宅.comの特徴</h2>
             </div>
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-2">
                 <div className="bg-main-orange text-white font-bold rounded p-4 mx-auto">
-                    <h3>初期費用ゼロ円！！！</h3>
+                    <h3 className="text-xl">初期費用ゼロ円！！！</h3>
                     <p>〜借上社宅１件から気軽に導入できます！〜</p>
                 </div>
+            </div>
+            <div className="flex justify-center mb-2">
                 <img src="assets/images/Group8.png"></img>
-                <li>利用料は借上社宅の件数分(1,500¥/月)だけ</li>
-                <li>賃貸契約に関わる書類の管理を全てオンラインで完結</li>
-                <li>更新手続もボタンを押すだけで完了！</li>
+            </div>
+            <div className="flex justify-center mb-2">
+                <div>                
+                    <li>利用料は借上社宅の件数分(1,500¥/月)だけ</li>
+                    <li>賃貸契約に関わる書類の管理を全てオンラインで完結</li>
+                    <li>更新手続もボタンを押すだけで完了！</li>
+                </div>
             </div>
         </div>
     </div>
