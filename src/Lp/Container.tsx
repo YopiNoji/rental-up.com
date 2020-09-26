@@ -4,9 +4,9 @@ const Header: React.FC = () => {
   return (
     <div className="">
         <div className="p-6">
-            <div className="grid grid-cols-2 gap-2 justify-items-center mb-8">
+            <div className="grid grid-cols-2 gap-2 justify-items-center mt-6 mb-8">
                 <div>
-                    <h2 className="text-4xl font-bold">借上社宅で企業も社員も支出を削減！</h2>
+                    <h2 className="text-4xl font-bold mb-4">借上社宅で企業も社員も支出を削減！</h2>
                     <p className="text-base">借上社宅.comは借上社宅の導入・運用を手軽にし企業と社員の課税支出を軽減するサービスです</p>
                 </div>
                 <img src="assets/images/Group9.png"></img>
@@ -14,6 +14,7 @@ const Header: React.FC = () => {
         </div>
         <div className="bg-pale-green p-6 w-full">
             <div className="flex justify-center mb-4">
+                <a id="about" />
                 <h2 className="text-xl font-bold">借上社宅とは？</h2>
             </div>
             <div className="grid grid-cols-2 gap-2 justify-items-center mb-8">
@@ -27,6 +28,7 @@ const Header: React.FC = () => {
         </div>
         <div className="p-6">
             <div className="flex justify-center mb-4">
+                <a id="merit" />
                 <h2 className="text-xl font-bold">メリット</h2>
             </div>
             <div className="grid grid-cols-2 gap-2 justify-items-center mb-8">
@@ -48,6 +50,7 @@ const Header: React.FC = () => {
         </div>
         <div className="p-6">
             <div className="flex justify-center mb-4">
+                <a id="feature" />
                 <h2 className="text-xl font-bold">借上社宅.comの特徴</h2>
             </div>
             <div className="flex justify-center mb-2">
