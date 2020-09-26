@@ -11,7 +11,7 @@ const Header: React.FC = () => {
                     <h2 className="text-4xl font-bold mb-4">借上社宅で企業も社員も支出を削減！</h2>
                     <p className="text-base">借上社宅.comは借上社宅の導入・運用を手軽にし企業と社員の課税支出を軽減するサービスです</p>
                 </div>
-                <img src="assets/images/Group9.png"></img>
+                <img src="assets/images/Group9.png" alt="image"></img>
             </div>
         </div>
         <div className="bg-pale-green p-6 w-full">
@@ -28,7 +28,7 @@ const Header: React.FC = () => {
                     <p className="text-base mb-4">企業はそれまで賃金として支払っていたお金が経費として計上でき、社員は給料等級が下がるので企業・社員ともに大幅な節税が期待できます。</p>
                     <p className="text-base mb-4">借上社宅.comは借上社宅の運用手間を軽減し、導入しやすくするサービスです。</p>
                 </div>
-                <img src="assets/images/Group3.png"></img>
+                <img src="assets/images/Group3.png" alt="image"></img>
             </div>
         </div>
         <div className="p-6">
@@ -41,18 +41,22 @@ const Header: React.FC = () => {
             </div>
             <div className="grid grid-cols-2 gap-2 justify-items-center mb-8">
                 <div>
-                    <img src="assets/images/Group5.png"></img>
-                    <li>福利厚生が充実し社員の離職防止に繋がる</li>
-                    <li>社会保険料が削減される</li>
-                    <li>家賃が経費計上できるので課税所得が減少する</li>
-                    <li>契約、更新、解約の手続きが楽になる</li>
+                    <img src="assets/images/Group5.png" alt="image"></img>
+                    <ul>
+                        <li>福利厚生が充実し社員の離職防止に繋がる</li>
+                        <li>社会保険料が削減される</li>
+                        <li>家賃が経費計上できるので課税所得が減少する</li>
+                        <li>契約、更新、解約の手続きが楽になる</li>
+                    </ul>
                 </div>
                 <div>
-                    <img src="assets/images/Group4.png"></img>
-                    <li>家賃負担額が減少する</li>
-                    <li>家賃が給与から天引きされる</li>
-                    <li>家賃分の所得が抑えられ税負担が軽減する</li>
-                    <li>賃貸契約書の管理が楽になる</li>
+                    <img src="assets/images/Group4.png" alt="image"></img>
+                    <ul>
+                        <li>家賃負担額が減少する</li>
+                        <li>家賃が給与から天引きされる</li>
+                        <li>家賃分の所得が抑えられ税負担が軽減する</li>
+                        <li>賃貸契約書の管理が楽になる</li>
+                    </ul>∂
                 </div>
             </div>
         </div>
@@ -71,13 +75,15 @@ const Header: React.FC = () => {
                 </div>
             </div>
             <div className="flex justify-center mb-8">
-                <img src="assets/images/Group8.png"></img>
+                <img src="assets/images/Group8.png" alt="image"></img>
             </div>
             <div className="flex justify-center mb-2">
-                <div>                
-                    <li>利用料は借上社宅の件数分(1,500¥/月)だけ</li>
-                    <li>賃貸契約に関わる書類の管理を全てオンラインで完結</li>
-                    <li>更新手続もボタンを押すだけで完了！</li>
+                <div> 
+                    <ul>
+                        <li>利用料は借上社宅の件数分(1,500¥/月)だけ</li>
+                        <li>賃貸契約に関わる書類の管理を全てオンラインで完結</li>
+                        <li>更新手続もボタンを押すだけで完了！</li>
+                    </ul>
                 </div>
             </div>
         </div>
