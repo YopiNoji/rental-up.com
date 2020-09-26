@@ -6,7 +6,7 @@ const Header: React.FC = () => {
         <div className="p-6">
             <div className="grid grid-cols-2 gap-2 justify-items-center mb-8">
                 <div>
-                    <h2 className="text-3xl font-bold">借上社宅で企業も社員も支出を削減！</h2>
+                    <h2 className="text-4xl font-bold">借上社宅で企業も社員も支出を削減！</h2>
                     <p className="text-base">借上社宅.comは借上社宅の導入・運用を手軽にし企業と社員の課税支出を軽減するサービスです</p>
                 </div>
                 <img src="assets/images/Group9.png"></img>

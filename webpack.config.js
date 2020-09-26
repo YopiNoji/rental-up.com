@@ -103,6 +103,11 @@ module.exports = (env = {}, argv) => {
     },
   }
 
+  const purgecss = require("@fullhuman/postcss-purgecss")({
+    content: ["./src/**/*.html", "./src/**/*.vue"],
+    defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+  });
+
   return {
     context: dir.project,
     entry,
@@ -127,11 +132,7 @@ module.exports = (env = {}, argv) => {
           ],
         },
         {
-          test: /\.css$/,
-          use: [isProd ? cssExtractConfig : 'style-loader', 'css-loader'],
-        },
-        {
-          test: /\.sass|scss$/,
+          test: /\.(sa|c|sc)ss$/,
           use: [
             isProd ? cssExtractConfig : 'style-loader',
             {
@@ -154,19 +155,20 @@ module.exports = (env = {}, argv) => {
                 plugins: [
                   require('tailwindcss'),
                   require('autoprefixer'),
+                  ...(isProd ? [purgecss] : [])
                 ],
               },
             },
-        //     {
-        //       loader: 'sass-loader',
-        //       // options doc -> https://github.com/sass/node-sass
-        //       options: {
-        //         sassOptions: {
-        //           sourceMap: true,
-        //           includePaths: [dir.css],
-        //         },
-        //       },
-        //     },
+            // {
+            //   loader: 'sass-loader',
+            //   // options doc -> https://github.com/sass/node-sass
+            //   options: {
+            //     sassOptions: {
+            //       sourceMap: true,
+            //       includePaths: [dir.css],
+            //     },
+            //   },
+            // },
           ],
         },
         {
@@ -222,7 +224,7 @@ module.exports = (env = {}, argv) => {
     },
     devServer: {
       contentBase: dir.build,
-      port: 3000,
+      port: 8000,
       host: 'localhost',
       disableHostCheck: true,
       hot: true,
