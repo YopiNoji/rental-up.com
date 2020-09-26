@@ -3,7 +3,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const autoprefixer = require('autoprefixer')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const Dotenv = require('dotenv-webpack')
 
 const projectPath = path.resolve(__dirname, './')
@@ -83,6 +83,9 @@ module.exports = (env = {}, argv) => {
       })
     )
   }
+
+  // If analyze bundle size, uncomment below.
+  // plugins.push(new BundleAnalyzerPlugin())
 
   const entry = {
     lp: [`${dir.src}/Lp/Index.tsx`],
