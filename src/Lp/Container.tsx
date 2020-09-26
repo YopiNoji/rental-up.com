@@ -13,9 +13,12 @@ const Header: React.FC = () => {
             </div>
         </div>
         <div className="bg-pale-green p-6 w-full">
-            <div className="flex justify-center mb-4">
+            <div className="flex justify-center mb-2">
                 <a id="about" />
                 <h2 className="text-xl font-bold">借上社宅とは？</h2>
+            </div>
+            <div className="flex justify-center mb-6">
+                <div className="w-6 border-b-2 border-main-green"></div>
             </div>
             <div className="grid grid-cols-2 gap-2 justify-items-center mb-8">
                 <div>
@@ -27,9 +30,12 @@ const Header: React.FC = () => {
             </div>
         </div>
         <div className="p-6">
-            <div className="flex justify-center mb-4">
+            <div className="flex justify-center mb-2">
                 <a id="merit" />
                 <h2 className="text-xl font-bold">メリット</h2>
+            </div>
+            <div className="flex justify-center mb-6">
+                <div className="w-6 border-b-2 border-main-green"></div>
             </div>
             <div className="grid grid-cols-2 gap-2 justify-items-center mb-8">
                 <div>
@@ -49,9 +55,12 @@ const Header: React.FC = () => {
             </div>
         </div>
         <div className="p-6">
-            <div className="flex justify-center mb-4">
+            <div className="flex justify-center mb-2">
                 <a id="feature" />
                 <h2 className="text-xl font-bold">借上社宅.comの特徴</h2>
+            </div>
+            <div className="flex justify-center mb-6">
+                <div className="w-6 border-b-2 border-main-green"></div>
             </div>
             <div className="flex justify-center mb-2">
                 <div className="bg-main-orange text-white font-bold rounded p-4 mx-auto">
@@ -68,6 +77,19 @@ const Header: React.FC = () => {
                     <li>賃貸契約に関わる書類の管理を全てオンラインで完結</li>
                     <li>更新手続もボタンを押すだけで完了！</li>
                 </div>
+            </div>
+        </div>
+        <div className="bg-pale-green p-6 w-full">
+            <div className="flex justify-center mb-2">
+                <a id="register" />
+                <h2 className="text-xl font-bold">事前ユーザー登録</h2>
+            </div>
+            <div className="flex justify-center mb-6">
+                <div className="w-6 border-b-2 border-main-green"></div>
+            </div>
+            <div className="flex flex-col mb-2">
+                <p className="text-center">登録していただいた企業様は</p>
+                <p className="text-center">ベータ版リリース後、優先的にご連絡差し上げます！</p>
             </div>
         </div>
     </div>
