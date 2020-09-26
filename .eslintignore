@@ -3,3 +3,4 @@ dist
 webpack.config.js
 node_modules
 build
+tailwind.config.js

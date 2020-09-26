@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "clean": "rm -rf build && rm -rf public",
+    "clean": "rm -rf build && rm -rf dist",
     "start": "webpack-dev-server -d",
     "build": "webpack -p",
     "lint": "eslint --fix --ext .js,.tsx,.ts ."
