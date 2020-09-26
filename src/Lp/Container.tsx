@@ -1,4 +1,6 @@
 import React from 'react';
+import TextField from '@/components/TextField'
+import Button from '@/components/Button'
 
 const Header: React.FC = () => {
   return (
@@ -68,7 +70,7 @@ const Header: React.FC = () => {
                     <p>〜借上社宅１件から気軽に導入できます！〜</p>
                 </div>
             </div>
-            <div className="flex justify-center mb-2">
+            <div className="flex justify-center mb-8">
                 <img src="assets/images/Group8.png"></img>
             </div>
             <div className="flex justify-center mb-2">
@@ -87,9 +89,21 @@ const Header: React.FC = () => {
             <div className="flex justify-center mb-6">
                 <div className="w-6 border-b-2 border-main-green"></div>
             </div>
-            <div className="flex flex-col mb-2">
+            <div className="flex flex-col mb-8">
                 <p className="text-center">登録していただいた企業様は</p>
                 <p className="text-center">ベータ版リリース後、優先的にご連絡差し上げます！</p>
+            </div>
+            <div className="flex justify-center mb-4">
+                <TextField label="法人名"/>
+            </div> 
+            <div className="flex justify-center mb-4">
+                <TextField label="メールアドレス" require/>
+            </div> 
+            <div className="flex justify-center mb-8">
+                <TextField label="担当者名" require/>
+            </div>
+            <div className="flex justify-center mb-4">
+                <Button label="今すぐ事前ユーザー登録" />
             </div>
         </div>
     </div>
