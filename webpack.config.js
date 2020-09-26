@@ -104,7 +104,7 @@ module.exports = (env = {}, argv) => {
   }
 
   const purgecss = require("@fullhuman/postcss-purgecss")({
-    content: ["./src/**/*.html", "./src/**/*.vue"],
+    content: ["./src/**/*.html", "./src/**/*.tsx", "./src/**/*.ts", "./src/**/*.js"],
     defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
   });
 
