@@ -217,7 +217,7 @@ module.exports = (env = {}, argv) => {
     },
     plugins: plugins,
     resolve: {
-      extensions: ['.mjs', '.js', '.ts', '.tsx'],
+      extensions: ['.mjs','.ejs', '.js', '.ts', '.tsx'],
       modules: ['node_modules', dir.project, dir.src],
       alias: {
         '@': dir.src,
@@ -231,9 +231,9 @@ module.exports = (env = {}, argv) => {
       host: 'localhost',
       disableHostCheck: true,
       hot: true,
-      historyApiFallback: {
-        rewrites: [{ from: /^\/login\/?/, to: '/login.html' }],
-      },
+      // historyApiFallback: {
+      //   rewrites: [{ from: /^\/login\/?/, to: '/login.html' }],
+      // },
       inline: true,
       // https: true,
       open: true,

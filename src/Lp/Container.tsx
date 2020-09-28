@@ -3,6 +3,9 @@ import TextField from '@/components/TextField'
 import Button from '@/components/Button'
 
 const Header: React.FC = () => {
+    const [companyName, setCName] = React.useState('')
+    const [email, setEmail] = React.useState('')
+    const [name, setName] = React.useState('')
   return (
     <div className="">
         <div className="p-6">
@@ -100,13 +103,13 @@ const Header: React.FC = () => {
                 <p className="text-center">ベータ版リリース後、優先的にご連絡差し上げます！</p>
             </div>
             <div className="flex justify-center mb-4">
-                <TextField label="法人名"/>
+                <TextField onChange={(e)=>{setCName(e.target.value)}} label="法人名"/>
             </div> 
             <div className="flex justify-center mb-4">
-                <TextField label="メールアドレス" require/>
+                <TextField onChange={(e)=>{setEmail(e.target.value)}} label="メールアドレス" require/>
             </div> 
             <div className="flex justify-center mb-8">
-                <TextField label="担当者名" require/>
+                <TextField onChange={(e)=>{setName(e.target.value)}} label="担当者名" require/>
             </div>
             <div className="flex justify-center mb-4">
                 <Button label="今すぐ事前ユーザー登録" />
