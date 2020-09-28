@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 // import { isAuthenticated, login } from '@/service/auth'
 
@@ -16,18 +16,18 @@ const SignIn: React.FC = () => {
     // if (result.isAuthenticated) {
     //   toApp()
     // }
-    toApp()
+    toApp();
   }
 
   function toApp() {
-    window.location.assign('/')
+    window.location.assign("/");
   }
 
   return (
     <div>
       <button onClick={handleLogin}>login</button>
     </div>
-  )
-}
+  );
+};
 
-export default SignIn
+export default SignIn;

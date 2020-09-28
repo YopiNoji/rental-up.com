@@ -1,7 +1,7 @@
-import React from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 // import useAuth from '@/hooks/useAuth'
-import Layout from './Layout'
+import Layout from "./Layout";
 
 const App: React.FC = () => {
   // const auth = useAuth()
@@ -25,7 +25,7 @@ const App: React.FC = () => {
     <Router>
       <Layout />
     </Router>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -1,20 +1,20 @@
-import 'core-js/stable'
+import "core-js/stable";
 
-import React from 'react'
-import { render } from 'react-dom'
-import smoothscroll from 'smoothscroll-polyfill'
+import React from "react";
+import { render } from "react-dom";
+import smoothscroll from "smoothscroll-polyfill";
 
-smoothscroll.polyfill()
+smoothscroll.polyfill();
 
-type PropsType = (App: React.FC) => void
+type PropsType = (App: React.FC) => void;
 
 const rootRender: PropsType = (App) => {
   render(
     <React.Fragment>
       <App />
     </React.Fragment>,
-    document.getElementById('root')
-  )
-}
+    document.getElementById("root")
+  );
+};
 
-export default rootRender
+export default rootRender;

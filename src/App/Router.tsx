@@ -1,8 +1,8 @@
-import React from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import React from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 // pages
-import Top from '@/App/pages/Top/Top'
+import Top from "@/App/pages/Top/Top";
 // import ComponentList from 'containers/ComponentList'
 
 const BaseRouter: React.FC = () => {
@@ -11,7 +11,7 @@ const BaseRouter: React.FC = () => {
       <Route exact path="/" component={Top} />
       <Redirect to="/" />
     </Switch>
-  )
-}
+  );
+};
 
-export default BaseRouter
+export default BaseRouter;

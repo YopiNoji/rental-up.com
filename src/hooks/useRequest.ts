@@ -4,8 +4,6 @@
 // import { useProvider } from '../App/context';
 // // import useAuth from './useAuth';
 
-
-
 // const client = axios.create({
 //   // baseURL: process.env.API_BASE_URL,
 //   baseURL: 'https://www.google.com/',
