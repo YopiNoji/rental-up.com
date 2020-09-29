@@ -5,13 +5,23 @@ type PropTypes = {
   label?: string;
   require?: boolean;
   type?: string;
+  hasError?: boolean;
+  errorMessage?: string;
   onChange?: (event: ChangeEvent<HTMLInputElement>) => unknown;
 };
 
-const TextField: React.FC<PropTypes> = ({ label, require, type, onChange }) => {
+const TextField: React.FC<PropTypes> = ({
+  label,
+  require,
+  type,
+  hasError,
+  errorMessage,
+  onChange,
+}) => {
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     onChange !== undefined ? onChange(event) : null;
   };
+  hasError = hasError || !!errorMessage;
   return (
     <>
       <div className="">
@@ -25,8 +35,11 @@ const TextField: React.FC<PropTypes> = ({ label, require, type, onChange }) => {
           <input
             onChange={handleChange}
             type={type || "text"}
-            className="block border border-light-gray shadow-inner rounded"
+            className={`block border shadow-inner rounded ${
+              hasError ? "border-red-600" : "border-light-gray"
+            }`}
           />
+          <span className="text-red-600 text-xs">{errorMessage}</span>
         </label>
       </div>
     </>
