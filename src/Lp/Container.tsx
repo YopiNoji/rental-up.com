@@ -70,7 +70,6 @@ const Header: React.FC = () => {
               <li>家賃分の所得が抑えられ税負担が軽減する</li>
               <li>賃貸契約書の管理が楽になる</li>
             </ul>
-            ∂
           </div>
         </div>
       </div>
