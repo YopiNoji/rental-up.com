@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  rental-up:
+    container_name: rental-up
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/src'
+    ports:
+      - 8000:8000
+    stdin_open: true
+    command: npm start
+    environment:
+      - NODE_ENV=development
+      
