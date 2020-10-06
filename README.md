@@ -16,6 +16,8 @@ docker-compose version 1.27.4, build 40524192
 Execute the following commands.
 
 ```bash
+$ git clone https://github.com/YopiNoji/rental-up.com.git
+$ cd rental-up.com
 $ docker-compose up -d --build
 ```
 
