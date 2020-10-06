@@ -228,7 +228,7 @@ module.exports = (env = {}, argv) => {
     devServer: {
       contentBase: dir.build,
       port: 8000,
-      host: 'localhost',
+      host: '0.0.0.0',
       disableHostCheck: true,
       hot: true,
       // historyApiFallback: {
