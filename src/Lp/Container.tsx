@@ -1,11 +1,30 @@
 import React from "react";
 import TextField from "@/components/TextField";
 import Button from "@/components/Button";
+import axios, { AxiosRequestConfig } from "axios";
 
-const Header: React.FC = () => {
+const Container: React.FC = () => {
   const [companyName, setCName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [name, setName] = React.useState("");
+  const client = axios.create({
+    // baseURL: process.env.API_BASE_URL,
+    baseURL:
+      "POST https://sheets.googleapis.com/v4/spreadsheets/{spreadsheetId}:batchUpdate",
+  });
+  async function request(config: AxiosRequestConfig) {
+    // Please below to how can you config
+    // https://github.com/axios/axios#request-config
+    const reqConfig = { ...config, headers: config.headers || {} };
+
+    try {
+      const result = await client(reqConfig);
+      return result.data;
+    } catch (err) {
+      alert(err);
+      throw err;
+    }
+  }
   return (
     <div className="">
       <div className="p-6">
@@ -128,16 +147,16 @@ const Header: React.FC = () => {
               setEmail(e.target.value);
             }}
             label="メールアドレス"
-            require
+            isRequire
           />
         </div>
         <div className="flex justify-center mb-8">
           <TextField
             onChange={(e) => {
-              setName(e.target.value);
+              setEmail(e.target.value);
             }}
             label="担当者名"
-            require
+            isRequire
           />
         </div>
         <div className="flex justify-center mb-4">
@@ -148,4 +167,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default Container;
