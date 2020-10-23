@@ -9,13 +9,24 @@ const Container: React.FC = () => {
   const [name, setName] = React.useState("");
   const client = axios.create({
     // baseURL: process.env.API_BASE_URL,
+    method: "POST",
     baseURL:
-      "POST https://sheets.googleapis.com/v4/spreadsheets/{spreadsheetId}:batchUpdate",
+      "https://sheets.googleapis.com/v4/spreadsheets/{spreadsheetId}:batchUpdate",
+    data: {
+      rows: [
+        {
+          userEnteredValue: {
+            numberValue: 100,
+          },
+        },
+      ],
+      fields: "string",
+    },
   });
-  async function request(config: AxiosRequestConfig) {
+  async function request(config?: AxiosRequestConfig) {
     // Please below to how can you config
     // https://github.com/axios/axios#request-config
-    const reqConfig = { ...config, headers: config.headers || {} };
+    const reqConfig = { ...config };
 
     try {
       const result = await client(reqConfig);
@@ -153,14 +164,19 @@ const Container: React.FC = () => {
         <div className="flex justify-center mb-8">
           <TextField
             onChange={(e) => {
-              setEmail(e.target.value);
+              setName(e.target.value);
             }}
             label="担当者名"
             isRequire
           />
         </div>
         <div className="flex justify-center mb-4">
-          <Button label="今すぐ事前ユーザー登録" />
+          <Button
+            onClick={(e) => {
+              request();
+            }}
+            label="今すぐ事前ユーザー登録"
+          />
         </div>
       </div>
     </div>
